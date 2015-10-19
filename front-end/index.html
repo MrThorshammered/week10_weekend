@@ -1,0 +1,44 @@
+<!doctype html>
+<html ng-app="complaintApp">
+<head>
+  <title>GRR</title>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.0/angular.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.0/angular-resource.min.js"></script>
+  <script src="js/angular-underscore-module.js"></script>
+  <script type="text/javascript" src="js/app.js"></script>
+  <script type="text/javascript" src="js/controllers.js"></script>
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+  <main ng-controller="MainController as main">
+    <h1>MotherF*%$£^g Angular</h1>
+
+    <form ng-submit="main.updateComplaint()" ng-show="main.selectComplaint">
+      <label for="update-complaint-name">Name:</label>
+      <input type="text" id="update-complaint-name" ng-model="main.selectComplaint.name">
+      <label for="update-complaint-url">Url:</label>
+      <input type="text" id="update-complaint-url" ng-model="main.selectComplaint.url">
+      <button>Update Character</button>
+    </form>
+
+    <h2 ng-show="false">{{ main.selectComplaint.name }}</h2>
+    <ul>
+      <li ng-repeat="complaint in main.complaints">
+        {{ complaint.name }}
+        <a ng-click="main.editComplaint(complaint)">edit</a>
+        <a ng-click="main.deleteComplaint(complaint)">delete</a>
+      </li>
+    </ul>
+
+    <form ng-submit="main.saveComplaint()">
+      <label for="complaint-name">name:</label>
+      <input type="text" id="complaint-name" ng-model="main.newComplaint.name">
+      <label for="complaint-url">Url:</label>
+      <input type="text" id="complaint-url" ng-model="main.newComplaint.url">
+      <button>Add Complaint</button>
+    </form>
+
+  </main>
+</body>
+</html>

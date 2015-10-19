@@ -1,0 +1,46 @@
+body {
+
+  background-color: lightgrey;
+  font-weight: 300;
+  font-size: 16px;
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.5;
+  text-align: center;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  width: 1300px;
+  position: relative;
+  right: 45%;
+
+}
+
+li {
+  list-style-type: none;
+  border: solid grey 1px;
+  background-color: white;
+  height: 50px;
+
+}
+
+form {
+  padding: 2em 0;
+}
+
+input {
+  line-height: 18px;
+  font-size: 16px;
+}
+
+h1{
+  background-color: black;
+  color: white;
+  position: relative;
+  right: 60%;
+  border: solid black 1px;
+  width: 1500px;
+  margin-bottom: 20px;
+}
